@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Service/ScrumCeremony/.vs/ScrumCeremony
+/Service/ScrumCeremony/bin/Debug/net5.0
+/Service/ScrumCeremony/obj
