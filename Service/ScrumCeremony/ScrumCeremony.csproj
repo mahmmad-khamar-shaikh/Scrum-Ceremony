@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -8,6 +8,11 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScrumCeremony.Data\ScrumCeremony.Data.csproj" />
+    <ProjectReference Include="..\ScrumCeremony.Planning.Domain\ScrumCeremony.Domain.csproj" />
   </ItemGroup>
 
 

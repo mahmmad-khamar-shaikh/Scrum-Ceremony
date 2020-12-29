@@ -5,3 +5,7 @@
 /Service/ScrumCeremony/.vs/ScrumCeremony
 /Service/ScrumCeremony/bin/Debug/net5.0
 /Service/ScrumCeremony/obj
+/Service/ScrumCeremony.Data/bin
+/Service/ScrumCeremony.Data/obj
+/Service/ScrumCeremony.Planning.Domain/bin
+/Service/ScrumCeremony.Planning.Domain/obj
