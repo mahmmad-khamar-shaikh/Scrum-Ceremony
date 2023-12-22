@@ -9,3 +9,4 @@
 /Service/ScrumCeremony.Data/obj
 /Service/ScrumCeremony.Planning.Domain/bin
 /Service/ScrumCeremony.Planning.Domain/obj
+/ui/**/environments
