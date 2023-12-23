@@ -1,1 +1,47 @@
-<p>login works!</p>
+<div class="signin-content">
+    <mat-card>
+        <mat-card-content>
+            <!-- <form [formGroup]="loginFormGroup">
+                <p>Please login to continue</p>
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="User" formControlName="userName" required>
+                    <mat-error *ngIf="isFieldInvalid('userName')">
+                        Please inform your user name
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <input matInput type="password" placeholder="Password" formControlName="password" required>
+                    <mat-error *ngIf="isFieldInvalid('userName')">
+                        Please inform your password
+                    </mat-error>
+                </mat-form-field>
+
+
+                <mat-error *ngIf="isError">
+                    {{customErrorMessage}}
+                </mat-error>
+            </form> -->
+
+            <div>
+                <button mat-stroked-button color="primary" (click)="loginWithGoogle()">
+          <fa-icon [icon]="googleIcon"></fa-icon> Login with Google
+        </button>
+            </div>
+            <div>
+                <button mat-stroked-button color="primary" (click)="loginWithGithub()">
+          <fa-icon [icon]="githubIcon"></fa-icon> Login with GitHub !
+        </button>
+
+            </div>
+            <div>
+                <button mat-stroked-button color="primary" (click)="loginWithMS()">
+          <fa-icon [icon]="microsoftIcon"></fa-icon> Login with Microsoft
+        </button>
+            </div>
+
+        </mat-card-content>
+        <mat-card-footer>
+            <button mat-raised-button color="primary" (click)="login()">Login</button>
+        </mat-card-footer>
+    </mat-card>
+</div>
