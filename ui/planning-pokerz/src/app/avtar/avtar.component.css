@@ -1,0 +1,34 @@
+:host {
+    .avtar-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 1rem;
+    }
+    .avtar-center>mat-card {
+        width: 300px;
+        background-color: #f0f8ff;
+    }
+    .avtar-center>mat-card>mat-card-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .avtar-center>mat-card>mat-card-actions {
+        margin-bottom: 10px;
+    }
+    .vertical {
+        display: flex;
+        flex-direction: column;
+        margin: 15px 0;
+    }
+    .radio-vertical {
+        margin: 5px;
+    }
+    #button-fab {
+        position: fixed;
+        left: 20px;
+        top: 15px;
+        color: #f0f8ff;
+    }
+}

@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+    <div>
+        <button mat-icon-button class="example-icon" (click)="isExpanded = !isExpanded" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    </div>
+    <div class="position-fixed">
+        <div>Scrum Ceremony</div>
+        <div style="font-size: 12px;" *ngIf="user?.length>0"> welcome {{user}} ! </div>
+    </div>
+    <div style="font-size: 12px; cursor: pointer;">
+        <fa-icon class="normal" size="lg" (click)="logout()" [icon]="signOutIcon"> </fa-icon>
+    </div>
+
+</mat-toolbar>
+
+<mat-sidenav-container autosize>
+    <mat-sidenav mode="side" [opened]="isExpanded">
+        <mat-nav-list>
+            <mat-list-item class="parent" color="primary">
+                <mat-icon mat-list-icon [routerLink]="['/home/team']">groups</mat-icon>
+            </mat-list-item>
+
+            <mat-list-item class="parent">
+                <mat-icon mat-list-icon [routerLink]="['/home/ceremony']">meeting_room </mat-icon>
+            </mat-list-item>
+
+            <mat-list-item class="parent">
+                <mat-icon mat-list-icon [routerLink]="['/home/avtar']">account_circle </mat-icon>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <div class="example-sidenav-content">
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-sidenav-container>

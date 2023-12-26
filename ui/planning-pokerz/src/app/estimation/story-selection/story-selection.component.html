@@ -1,0 +1,22 @@
+<div class="storoy-dashboard">
+
+    <form [formGroup]="storyForm">
+        <div>
+            <button mat-stroked-button (click)="goBackToBoard()" style="margin-left: 10px; margin-right: 10px;">
+              <mat-icon>reply</mat-icon>
+
+            </button>
+            <mat-form-field>
+                <input matInput placeholder="Story Name" formControlName="storyName" required>
+
+                <mat-error *ngIf="isFieldInvalid('storyName')">
+                    Please enter story Name or Number
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-stroked-button color="primary" (click)="startEstimation()" style="margin-left: 10px;"> Start Estimation</button>
+            <button mat-stroked-button color="warn" (click)="closeEstimation()" style="margin-left: 10px;"> Close Estimation </button>
+        </div>
+    </form>
+</div>

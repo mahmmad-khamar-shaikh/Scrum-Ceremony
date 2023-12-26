@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterOutlet } from '@angular/router';
 import { AppMaterialModule } from './app-material.module';
 import { AppRoutingModule } from './app-routing.module';
-import { LoginComponent } from './login/login/login.component';
 import { Observable, filter, map, of, switchMap } from 'rxjs';
 import { SessionInformationService } from './services/session-information.service';
 

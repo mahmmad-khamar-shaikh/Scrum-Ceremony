@@ -1,0 +1,60 @@
+:host {
+    .action-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: center;
+    }
+    .dashboard {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0.4rem;
+        align-items: center;
+        align-content: center;
+    }
+    .dashboard>mat-card {
+        display: flex;
+        justify-content: center;
+        height: 100px;
+        width: 70px;
+        margin: 10px;
+        background-color: #6495ed;
+        color: whitesmoke;
+        cursor: pointer;
+    }
+    .dashboard-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0.4rem;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+    .dashboard-card>mat-card {
+        display: flex;
+        justify-content: center;
+        height: 100px;
+        width: 70px;
+        margin: 10px;
+        background-color: #6495ed;
+        color: whitesmoke;
+        cursor: pointer;
+    }
+    .dashboard>.mat-card-subtitle,
+    .mat-card-content {
+        font-size: 50px !important;
+    }
+    .selection-button {
+        background-color: #6495ed !important;
+        color: whitesmoke !important;
+    }
+    #button-fab {
+        position: fixed;
+        left: 20px;
+        top: 15px;
+        color: #f0f8ff;
+    }
+}

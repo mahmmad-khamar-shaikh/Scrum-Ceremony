@@ -1,0 +1,35 @@
+:host {
+    .limited-dashboard {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 5px;
+        flex-wrap: wrap;
+    }
+    .limited-dashboard>mat-card {
+        background-color: #f0f8ff;
+    }
+    .limited-dashboard>mat-chip-list {
+        margin: 10px;
+    }
+    .story-point-chip {
+        background-color: #ffe4c4 !important;
+    }
+    .story-point-not-sure-chip {
+        background-color: #ffe4c4 !important;
+        color: blue;
+    }
+    .story-point-doubt-chip {
+        background-color: #ffe4c4 !important;
+        color: blue;
+    }
+    .mat-card-header {
+        display: flex;
+        flex-direction: column !important;
+        margin: 15px 0;
+    }
+    .title-text {
+        font-size: 20px;
+        margin-top: 25px;
+    }
+}

@@ -1,0 +1,19 @@
+:host {
+    .position-fixed {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+    }
+    .home-center {
+        display: flex;
+        box-sizing: border-box;
+        padding: 0 16px;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        white-space: nowrap;
+        background-color: #f0f8ff;
+    }
+}

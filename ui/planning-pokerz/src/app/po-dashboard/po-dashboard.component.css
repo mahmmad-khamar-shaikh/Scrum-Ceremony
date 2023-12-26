@@ -1,0 +1,20 @@
+:host {
+    .po-dashboard {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 5px;
+        flex-wrap: wrap;
+    }
+    .storyLabel {
+        border: 1px #a6d5fa solid;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 14px;
+        color: white;
+        background: #3f51b5;
+    }
+    .text-label {
+        font-family: Roboto, "Helvetica Neue", sans-serif;
+    }
+}

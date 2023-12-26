@@ -1,0 +1,21 @@
+:host {
+    .admin-dashboard {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 5px;
+        flex-wrap: wrap;
+    }
+    .admin-dashboard>mat-chip-list {
+        margin: 10px;
+    }
+    .story-point-chip {
+        background-color: #ffe4c4 !important;
+    }
+    .story-point-not-sure-chip {
+        background-color: #deb887 !important;
+    }
+    .story-point-doubt-chip {
+        background-color: #ffa07a !important;
+    }
+}

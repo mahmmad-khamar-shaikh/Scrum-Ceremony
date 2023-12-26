@@ -1,0 +1,9 @@
+:host {
+    .storoy-dashboard {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 5px;
+        flex-wrap: wrap;
+    }
+}

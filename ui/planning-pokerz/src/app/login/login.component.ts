@@ -5,14 +5,12 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGithub, faGoogle, faMicrosoft } from '@fortawesome/free-brands-svg-icons';
-import { AuthService } from '../../services/auth.service';
-import { SessionInformationService } from '../../services/session-information.service';
-import { IUser } from '../../types/user.interface';
+import { AuthService } from '../services/auth.service';
+import { SessionInformationService } from '../services/session-information.service';
+import { IUser } from '../types/user.interface';
 
 @Component({
   selector: 'sc-login',
-  standalone: true,
-  imports: [MatCardModule, FontAwesomeModule, MatSnackBarModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

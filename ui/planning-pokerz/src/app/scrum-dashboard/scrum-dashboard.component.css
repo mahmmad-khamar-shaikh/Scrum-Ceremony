@@ -1,0 +1,21 @@
+:host {
+    .scrum-container {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+    mat-card {
+        width: 70%;
+        margin: 0.4rem;
+    }
+    mat-card-content {
+        margin-top: 10px;
+    }
+    mat-icon {
+        cursor: pointer;
+    }
+    mat-card-header {
+        display: block;
+    }
+}

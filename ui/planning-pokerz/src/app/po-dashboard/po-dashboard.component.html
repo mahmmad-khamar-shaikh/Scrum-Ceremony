@@ -1,0 +1,13 @@
+<div class="po-dashboard ">
+    <div class="storyLabel" *ngIf="storyName |async else elseMessage">
+        {{storyName |async }}
+    </div>
+    <ng-template #elseMessage>
+        <div class="storyLabel">
+            No Story Selected !
+        </div>
+    </ng-template>
+
+</div>
+
+<app-limited-dashboard></app-limited-dashboard>

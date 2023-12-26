@@ -1,0 +1,18 @@
+:host {
+    .retro-container {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+    mat-card {
+        width: 70%;
+        margin: 0.4rem;
+    }
+    mat-card-content {
+        margin: 0px;
+    }
+    mat-icon {
+        cursor: pointer;
+    }
+}

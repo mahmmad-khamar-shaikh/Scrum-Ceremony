@@ -1,0 +1,52 @@
+<div class="dashboard" style="justify-content: space-evenly !important;">
+    <div>
+        <button mat-stroked-button color="primary" [disabled]="isStoryButtonDisabled" (click)="navigateToStorySelection()">
+      Story {{storyNumber}}
+    </button>
+    </div>
+    <div>
+        <button mat-stroked-button color="warn" (click)="startEndMeeting()">
+      {{isMeetingLive  ? 'End Meeting' : 'Start Meeting'}}
+    </button>
+    </div>
+</div>
+<div class="dashboard-card">
+    <mat-card matRipple *ngFor="let story of arrayStoryNumber" (click)="cardSelection(story) ">
+        <mat-card-content>
+            {{story}}
+        </mat-card-content>
+    </mat-card>
+</div>
+<div class="dashboard ">
+    <mat-card matRipple (click)="cardSelection( 'all_inclusive') ">
+        <mat-card-content>
+            <mat-icon>all_inclusive</mat-icon>
+        </mat-card-content>
+    </mat-card>
+    <mat-card matRipple (click)="cardSelection( '?') ">
+        <mat-card-content>
+            ?
+        </mat-card-content>
+    </mat-card>
+
+
+</div>
+<div class="dashboard ">
+    <div [ngSwitch]="cardValue.type ">
+        <div *ngSwitchCase=" 'all_inclusive' ">
+            <button mat-stroked-button color="warn" (click)="submitEsitmation()"> I am NOT sure !</button>
+        </div>
+        <div *ngSwitchCase=" '?' ">
+            <button mat-stroked-button color="warn" (click)="submitEsitmation()"> I still have a doubt !</button>
+        </div>
+        <div *ngSwitchDefault>
+            <button mat-stroked-button *ngIf="!cardValue.value" color="primary">
+        Please select Card Above</button>
+            <button mat-stroked-button *ngIf="cardValue.value" color="primary" (click)="submitEsitmation()">
+        I want to go with :
+        {{cardValue.value}}</button></div>
+    </div>
+</div>
+<p *ngFor="let item of meetingCollection$ | async">
+    {{ item.ceremonyId.toString() }} is {{ item.isMeetingLive }}
+</p>

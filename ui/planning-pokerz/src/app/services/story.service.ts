@@ -1,11 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, DocumentReference } from '@angular/fire/compat/firestore';
-import { promise } from 'protractor';
-import { map } from 'rxjs/operators';
 import { IEstimation, IStory } from '../types/shared.interface';
-import { MeetingService } from './meeting.service';
-import { SessionInformationService } from './session-information.service';
-import { UtilService } from './util.service';
 
 @Injectable({
   providedIn: 'root'

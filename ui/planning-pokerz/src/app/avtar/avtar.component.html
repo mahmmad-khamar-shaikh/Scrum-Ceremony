@@ -1,0 +1,25 @@
+<div class="avtar-center">
+    <mat-card>
+        <mat-card-content>
+            <form [formGroup]="avtarForm">
+                <mat-form-field>
+                    <input matInput placeholder="Display Name" formControlName="displayName" required>
+                    <mat-error *ngIf="isFieldInvalid('displayName')">
+                        Please enter Display Name
+                    </mat-error>
+                </mat-form-field>
+                <mat-radio-group aria-label="Select your Role" class="vertical" formControlName="avtarRole">
+                    <mat-radio-button class="radio-vertical" value="DEV">Deveoper/QA</mat-radio-button>
+                    <mat-radio-button class="radio-vertical" value="SL">SM/SL</mat-radio-button>
+                    <mat-radio-button class="radio-vertical" value="PO">Product Owner</mat-radio-button>
+                </mat-radio-group>
+            </form>
+        </mat-card-content>
+        <mat-card-actions align="center">
+            <button mat-raised-button color="primary" [disabled]="isFieldInvalid('displayName')" (click)="toDashboard()">
+        Join as {{avtarForm.get('avtarRole')?.value}}
+      </button>
+
+        </mat-card-actions>
+    </mat-card>
+</div>

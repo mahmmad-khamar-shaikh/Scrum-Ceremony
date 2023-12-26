@@ -1,0 +1,21 @@
+<div class="team-container">
+    <mat-card>
+        <mat-card-content>
+            <form [formGroup]="teamForm">
+                <mat-form-field>
+                    <input matInput placeholder="Team Name" formControlName="teamName" required>
+                    <mat-error *ngIf="isFieldInvalid('teamName')">
+                        Please enter TeamName
+                    </mat-error>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions align="center">
+            <button mat-raised-button color="primary" [disabled]="isFieldInvalid('teamName')" (click)="save()">
+        Save
+      </button>
+            <button mat-raised-button color="secondary" (click)="cancel()"> Cancel
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</div>

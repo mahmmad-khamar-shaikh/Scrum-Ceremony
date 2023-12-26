@@ -1,0 +1,25 @@
+:host {
+    .ceremony-container {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+    mat-card {
+        width: 70%;
+        margin: 0.4rem;
+        background-color: #f0f8ff;
+    }
+    mat-card-content {
+        margin: 0px;
+    }
+    mat-icon {
+        cursor: pointer;
+    }
+    #button-fab {
+        position: fixed;
+        left: 20px;
+        top: 15px;
+        color: #f0f8ff;
+    }
+}
