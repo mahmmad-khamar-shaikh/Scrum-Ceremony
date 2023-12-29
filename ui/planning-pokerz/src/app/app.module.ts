@@ -20,7 +20,7 @@ import { TeamComponent } from './team/team.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UnderContructionComponent } from './under-contruction/under-contruction.component';
 import { LimitedDashboardComponent } from './limited-dashboard/limited-dashboard.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -41,7 +41,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LimitedDashboardComponent,
     PoDashboardComponent,
     StorySelectionComponent,
-    AddTeamComponent
+    AddTeamComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -49,6 +50,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppMaterialModule,
     FormsModule,
     FontAwesomeModule,
+    ReactiveFormsModule
   
   ],
   providers: [],

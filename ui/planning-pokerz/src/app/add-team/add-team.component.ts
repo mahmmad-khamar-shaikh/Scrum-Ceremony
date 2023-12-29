@@ -12,7 +12,7 @@ import { UtilService } from '../services/util.service';
   styleUrls: ['./add-team.component.scss']
 })
 export class AddTeamComponent implements OnInit {
-  teamForm: UntypedFormGroup;
+  teamForm!: UntypedFormGroup;
   constructor(
     private fb: UntypedFormBuilder,
     private teamService: TeamService,

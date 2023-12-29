@@ -13,7 +13,7 @@ import { ICeremony } from '../types/shared.interface';
   styleUrls: ['./ceremony.component.scss']
 })
 export class CeremonyComponent implements OnInit {
-  ceremonies$: ICeremony[];
+  ceremonies$!: ICeremony[];
 
   constructor(
     private ceremonyService: CeremonyService,
@@ -34,7 +34,7 @@ export class CeremonyComponent implements OnInit {
 
   }
 
-  navigateToCermony(ceremonyType: CeremonyOptions, ceremonyId: string): void {
+  navigateToCermony(ceremonyType: string, ceremonyId: string): void {
     switch (ceremonyType.toString()) {
       case 'Estimation':
         this.sessionInformationService.setSessionCeremony = ceremonyId;

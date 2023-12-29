@@ -12,6 +12,8 @@ import { RetroDashboardComponent } from './retro-dashboard/retro-dashboard.compo
 import { ScrumDashboardComponent } from './scrum-dashboard/scrum-dashboard.component';
 import { StorySelectionComponent } from './estimation/story-selection/story-selection.component';
 import { PoDashboardComponent } from './po-dashboard/po-dashboard.component';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const loginScreenChildren: Routes = [
     { path: 'signin', component: LoginComponent },

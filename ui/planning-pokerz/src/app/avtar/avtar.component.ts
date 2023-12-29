@@ -13,7 +13,7 @@ import { SessionInformationService } from '../services/session-information.servi
 export class AvtarComponent implements OnInit {
 
   faArrowLeft = faBackward;
-  avtarForm: UntypedFormGroup;
+  avtarForm!: UntypedFormGroup;
   constructor(
     private fb: UntypedFormBuilder,
     private router: Router,
