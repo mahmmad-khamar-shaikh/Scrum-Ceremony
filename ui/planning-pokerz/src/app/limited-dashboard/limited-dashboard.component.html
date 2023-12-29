@@ -3,11 +3,11 @@
         <mat-card-content>
             <div class="limited-dashboard title-text">
 
-                <mat-chip-list *ngFor="let story of storyPointCollection">
+                <mat-chip-listbox *ngFor="let story of storyPointCollection">
                     <mat-chip class="story-point-chip">
                         <span matBadge="{{story.storyPoint}}" matBadgeOverlap="false">{{story.userName}}</span>
                     </mat-chip>
-                </mat-chip-list>
+                </mat-chip-listbox>
 
                 <ng-template *ngIf="storyName |async ">
                     <mat-progress-spinner></mat-progress-spinner>
@@ -22,12 +22,12 @@
                 {{storyName ? 'Good, Team understands story!' : 'No Story Selected'}}
             </div>
             <div class="limited-dashboard">
-                <mat-chip-list *ngFor="let userNotSure of userNotSureCollection">
+                <mat-chip-listbox *ngFor="let userNotSure of userNotSureCollection">
                     <mat-chip class="story-point-not-sure-chip">
                         {{userNotSure.userName}}
                         <mat-icon style="padding-left: 2px;">sentiment_very_dissatisfied</mat-icon>
                     </mat-chip>
-                </mat-chip-list>
+                </mat-chip-listbox>
             </div>
             <mat-divider></mat-divider>
             <div class="limited-dashboard title-text" *ngIf="userStillHaveADoubt.length>0">
@@ -37,12 +37,12 @@
                 <span> {{storyName ? 'Good, Team has no doubt ! ' : 'No Story Selected'}} </span>
             </div>
             <div class="limited-dashboard">
-                <mat-chip-list *ngFor="let userWithDoubt of userStillHaveADoubt">
+                <mat-chip-listbox *ngFor="let userWithDoubt of userStillHaveADoubt">
                     <mat-chip class="story-point-doubt-chip">
                         {{userWithDoubt.userName}}
                         <mat-icon>not_listed_location</mat-icon>
                     </mat-chip>
-                </mat-chip-list>
+                </mat-chip-listbox>
             </div>
         </mat-card-content>
     </mat-card>

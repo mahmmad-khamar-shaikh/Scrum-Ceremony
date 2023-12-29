@@ -12,7 +12,7 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public user: string | undefined;
+  public user: string ;
   items: MenuItem[];
   home: MenuItem;
   isExpanded = false;
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   }
   signOutIcon = faSignOutAlt;
   ngOnInit(): void {
-    this.user = this.sessionInformationService.getUserInformation.displayName;
+    this.user = this.sessionInformationService.getUserInformation.displayName || 'Guest';
     this.home = { icon: 'pi pi-home', routerLink: '/' };
   }
   logout(): void {

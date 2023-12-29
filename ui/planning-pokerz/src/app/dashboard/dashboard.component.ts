@@ -7,7 +7,7 @@ import { MeetingService } from '../services/meeting.service';
 import { SessionInformationService } from '../services/session-information.service';
 import { StoryService } from '../services/story.service';
 import { UtilService } from '../services/util.service';
-import { ICardValue, IEstimation, IMeeting } from '..types/shared.interface';
+import { ICardValue, IEstimation, IMeeting } from '../types/shared.interface';
 import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-dashboard',
