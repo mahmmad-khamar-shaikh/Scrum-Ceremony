@@ -1,7 +1,7 @@
 <div class="ceremony-container">
     <mat-card *ngFor="let cer of ceremonies$; let i=index">
         <mat-card-content align="center">{{cer.ceremonyName}}</mat-card-content>
-        <mat-card-actions align="start">
+        <mat-card-actions style="display: flex; justify-content: center;">
             <mat-icon color="primary" matRipple (click)="navigateToCermony(cer.ceremonyName ,cer.ceremonyId)">meeting_room</mat-icon>
         </mat-card-actions>
     </mat-card>

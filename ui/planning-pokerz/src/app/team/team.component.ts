@@ -28,14 +28,14 @@ export class TeamComponent implements OnInit {
   ngOnInit(): void {
 
 
-    this.sessionService.showHideLoader = true;
+    this.sessionService.showLoader = true;
     this.teamService.getTeamCollection.snapshotChanges().pipe(
       map(changes =>
         changes.map(this.utilService.dbToDomanEntity)
       )
     ).subscribe(data => {
       this.teams$ = data;
-      this.sessionService.showHideLoader = false;
+      this.sessionService.showLoader = false;
     });
 
   }

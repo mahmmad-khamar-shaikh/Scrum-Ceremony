@@ -22,6 +22,9 @@ import { UnderContructionComponent } from './under-contruction/under-contruction
 import { LimitedDashboardComponent } from './limited-dashboard/limited-dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment.development';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -50,9 +53,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppMaterialModule,
     FormsModule,
     FontAwesomeModule,
-    ReactiveFormsModule
-  
-  ],
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'angular-auth-firebase')
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -22,14 +22,14 @@ export class CeremonyComponent implements OnInit {
     private utilService: UtilService
   ) { }
   ngOnInit(): void {
-    this.sessionInformationService.showHideLoader = true;
+    this.sessionInformationService.showLoader = true;
     this.ceremonyService.getCeremonyCollection.snapshotChanges().pipe(
       map(changes =>
         changes.map(this.utilService.dbToDomanEntity)
       )
     ).subscribe(data => {
       this.ceremonies$ = data;
-      this.sessionInformationService.showHideLoader = false;
+      this.sessionInformationService.showLoader = false;
     });
 
   }

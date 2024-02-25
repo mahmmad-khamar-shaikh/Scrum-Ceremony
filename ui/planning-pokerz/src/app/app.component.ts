@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterOutlet } from '@angular/router';
+import {
+  NavigationCancel,
+  NavigationEnd,
+  NavigationError,
+  NavigationStart,
+  Router,
+  RouterOutlet,
+} from '@angular/router';
 import { AppMaterialModule } from './app-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { Observable, filter, map, of, switchMap } from 'rxjs';
@@ -9,25 +16,25 @@ import { SessionInformationService } from './services/session-information.servic
 @Component({
   selector: 'sc-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
   title = 'static';
-  loading: Observable<boolean> = of(true);
+  loading: boolean = false;
   constructor(
     private router: Router,
     private sessionInformationService: SessionInformationService
   ) {
     this.router.events.pipe(
-      map(evnt=>{
+      map((evnt) => {
         switch (true) {
           case evnt instanceof NavigationStart:
-            this.loading = of(true);
+            this.loading = true;
             break;
           case evnt instanceof NavigationCancel:
           case evnt instanceof NavigationEnd:
           case evnt instanceof NavigationError: {
-            this.loading = of(false);
+            this.loading = false;
             break;
           }
           default:
@@ -37,9 +44,8 @@ export class AppComponent implements OnInit {
     );
   }
   ngOnInit(): void {
-    setTimeout(() => {
-      this.loading = this.sessionInformationService.showLoaderSubject;
-    }, 2000);
-
+    // setTimeout(() => {
+    //   this.loading = this.sessionInformationService.showLoaderSubject;
+    // }, 2000);
   }
 }

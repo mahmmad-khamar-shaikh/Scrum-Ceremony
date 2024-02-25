@@ -53,7 +53,7 @@ export class SessionInformationService {
   set setStoryNameSubject(storyName: string) {
     this.storyNameSubject.next(storyName);
   }
-  set showHideLoader(isVisible: boolean) {
+  set showLoader(isVisible: boolean) {
     this.showLoaderSubject.next(isVisible);
   }
 

@@ -3,12 +3,12 @@
         <mat-card-content align="center">
             {{team.teamName}}
         </mat-card-content>
-        <mat-card-actions align="start">
+        <mat-card-actions  style="display: flex; justify-content: center;">
             <mat-icon color="primary" matRipple (click)="navigateToCeremony(team.id)">groups</mat-icon>
         </mat-card-actions>
     </mat-card>
     <mat-card>
-        <mat-card-actions align="start">
+        <mat-card-actions style="display: flex; justify-content: center;">
             <mat-icon color="primary" matRipple (click)="navigateAddTeam()">add </mat-icon>
         </mat-card-actions>
     </mat-card>
